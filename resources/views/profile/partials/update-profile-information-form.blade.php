@@ -54,6 +54,12 @@
         </div>
 
         <div>
+            <x-input-label for="description" :value="__('Description')" />
+            <x-text-input id="description" name="description" type="text" class="mt-1 block w-full" :value="old('description', $user->description)" required autofocus autocomplete="description" />
+            <x-input-error class="mt-2" :messages="$errors->get('description')" />
+        </div>
+
+        <div>
             <x-input-label for="photo" :value="__('Image')" />
             <x-text-input id="photo" name="photo" type="text" class="mt-1 block w-full" :value="old('photo', $user->photo)" required autofocus autocomplete="photo" />
             <x-input-error class="mt-2" :messages="$errors->get('photo')" />
